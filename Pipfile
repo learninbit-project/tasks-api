@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+black = "*"
+dj-database-url = "*"
+Django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+factory-boy = "*"
+gunicorn = "*"
+Pillow = "*"
+PyYAML = "*"
+uritemplate = "*"
+django-storages = "*"
+django-environ = "*"
+python-dotenv = "*"
+django-filter = "*"
+psycopg = "*"
+whitenoise = "*"
+drf-yasg = "*"
+djangorestframework-simplejwt = "*"
+dj-rest-auth = "*"
