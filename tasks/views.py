@@ -8,6 +8,7 @@ from .serializers import TaskCategorySerializer, TaskSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
+    lookup_field = "external_id"
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = (permissions.TaskPermission,)
@@ -24,6 +25,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 
 class TaskCategoryViewSet(viewsets.ModelViewSet):
+    lookup_field = "external_id"
     queryset = TaskCategory.objects.all()
     serializer_class = TaskCategorySerializer
     permission_classes = (permissions.TaskCategoryPermission,)
