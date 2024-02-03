@@ -18,6 +18,11 @@ class TaskCategory(BaseModel):
 class Task(BaseModel):
     label = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
+    category = models.ForeignKey(
+        TaskCategory,
+        related_name="tasks",
+        on_delete=models.PROTECT,
+    )
     meta = models.JSONField(null=True)
 
     created_by = models.ForeignKey(

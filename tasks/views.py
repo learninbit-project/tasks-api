@@ -18,7 +18,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     }
 
     def get_queryset(self) -> QuerySet:
-        return super().get_queryset().filter(created_by__id=self.request.user.id)
+        return super().get_queryset().filter(created_by=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
@@ -35,7 +35,7 @@ class TaskCategoryViewSet(viewsets.ModelViewSet):
     }
 
     def get_queryset(self) -> QuerySet:
-        return super().get_queryset().filter(created_by__id=self.request.user.id)
+        return super().get_queryset().filter(created_by=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
